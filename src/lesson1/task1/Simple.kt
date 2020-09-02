@@ -49,8 +49,7 @@ fun quadraticRootProduct(a: Double, b: Double, c: Double): Double {
  * Пример главной функции
  */
 fun main() {
-    val x1x2 = quadraticRootProduct(1.0, 13.0, 42.0)
-    println("Root product: $x1x2")
+
 }
 
 /**
@@ -76,7 +75,12 @@ fun lengthInMeters(sagenes: Int, arshins: Int, vershoks: Int): Double = TODO()
  * Пользователь задает угол в градусах, минутах и секундах (например, 36 градусов 14 минут 35 секунд).
  * Вывести значение того же угла в радианах (например, 0.63256).
  */
-fun angleInRadian(deg: Int, min: Int, sec: Int): Double = TODO()
+fun angleInRadian(deg: Int, min: Int, sec: Int): Double {
+    val secondsValue = deg * 3600 + min * 60 + sec
+    val degreeValue = secondsValue / 3600
+    return degreeValue * PI / 180
+
+}
 
 /**
  * Тривиальная
@@ -92,7 +96,18 @@ fun trackLength(x1: Double, y1: Double, x2: Double, y2: Double): Double = TODO()
  * Пользователь задает целое число, большее 100 (например, 3801).
  * Определить третью цифру справа в этом числе (в данном случае 8).
  */
-fun thirdDigit(number: Int): Int = TODO()
+fun thirdDigit(number: Int): Int {
+    val interimResult = number % 1000
+    val result = interimResult / 100
+    println("$result")
+    return result
+}
+//fun thirdDigitTry(number: Int): Int {
+//    val interimResult = number % 1000
+//    val result = interimResult / 100
+//    println("$result")
+//    return result
+//}
 
 /**
  * Простая
@@ -119,3 +134,4 @@ fun accountInThreeYears(initial: Int, percent: Int): Double = TODO()
  * Необходимо вывести число, полученное из заданного перестановкой цифр в обратном порядке (например, 874).
  */
 fun numberRevert(number: Int): Int = TODO()
+
